@@ -1,21 +1,23 @@
-global: 
-  integrations: 
-    - homeAssistant 
-    - bluetoothLowEnergy 
-homeAssistant: 
-  mqttUrl: 'mqtt://192.168.11.100:1883' 
-bluetoothLowEnergy: 
-  whitelist: 
+global:
+  instanceName: home
+  integrations:
+    - homeAssistant
+    - bluetoothLowEnergy
+homeAssistant:
+  mqttUrl: 'mqtt://192.168.11.101:1883'
+bluetoothLowEnergy:
+  timeout: 60
+  allowlist:
     - e2d8a51cadf2
-    - c0aa65554771 
-    - de9f0b27ae6c 
+    - c0aa65554771
+    - de9f0b27ae6c
     - fabda2e11169
-  tagOverrides: 
-    e2d8a51cadf2: 
-      name: RED nut 
-    c0aa65554771: 
-      name: GREEN nut 
-    de9f0b27ae6c: 
-      name: GREY nut 
+  tagOverrides:
+    e2d8a51cadf2:
+      name: RED nut
+    c0aa65554771:
+      name: GREEN nut
+    de9f0b27ae6c:
+      name: GREY nut
     fabda2e11169:
       name: WHITE nut
